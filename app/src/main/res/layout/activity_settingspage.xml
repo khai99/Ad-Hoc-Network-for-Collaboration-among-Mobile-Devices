@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Settingspage"
+    android:background="@color/backgroundcolor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarsettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00AEC5"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/settings" />
+        <TextView
+            android:id="@+id/titleid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothic"
+            android:text="Settings"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/textcolor"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Settings"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textColor="@color/textcolor"-->
+<!--        />-->
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/cardbackground"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bluetoothon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:text="Bluetooth"
+                android:textSize="20dp"
+                android:textColor="@color/settingstext"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="25dp"
+                android:layout_marginLeft="120dp"
+                android:text="Enabling Bluetooth allow the app to scan and advertise for a successful connection."
+                android:textSize="15dp"
+                android:textColor="@color/textcolor"
+                android:textStyle="italic" />
+
+                <ToggleButton
+                    android:id="@+id/bluetooth_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="335dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bluetoothicon"
+                    android:textOff=""
+                    android:textOn="" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+<!--    Location Button-->
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/cardbackground"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/locationon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:text="Location"
+                android:textSize="20dp"
+                android:textColor="@color/settingstext"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="25dp"
+                android:layout_marginLeft="120dp"
+                android:text="Enabling your Location will allow the app to connect over Bluetooth Low Energy (BLE). "
+                android:textSize="15dp"
+                android:textColor="@color/textcolor"
+                android:textStyle="italic" />
+
+            <ToggleButton
+                android:id="@+id/location_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="335dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/locationicon"
+                android:textOff=""
+                android:textOn="" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+<!--    Internet Settings-->
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/cardbackground"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/internet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:text="Internet Settings"
+                android:textSize="20dp"
+                android:textColor="@color/settingstext"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="25dp"
+                android:layout_marginLeft="120dp"
+                android:text="Enabling your WiFi or Data allow the app to play synchronously in multiple devices"
+                android:textSize="15dp"
+                android:textColor="@color/textcolor"
+                android:textStyle="italic" />
+
+            <ToggleButton
+                android:id="@+id/internet_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="335dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/interneticon"
+                android:textOff=""
+                android:textOn="" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    Dark Mode Settings-->
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/cardbackground"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/darkmodeblue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:text="Dark Mode"
+                android:textSize="20dp"
+                android:textColor="@color/settingstext"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="25dp"
+                android:layout_marginLeft="120dp"
+                android:text="Enabling Dark Mode will allow us to enhance your experience by maintaining the minimum colour contrast required for readability. "
+                android:textSize="15dp"
+                android:textColor="@color/textcolor"
+                android:textStyle="italic" />
+
+            <ToggleButton
+                android:id="@+id/btnToggleDark"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="335dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/darkmodeicon"
+                android:textOff=""
+                android:textOn="" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</LinearLayout>

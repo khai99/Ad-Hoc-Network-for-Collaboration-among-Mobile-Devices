@@ -1,0 +1,71 @@
+
+plugins {
+    id 'com.android.application'
+    id 'jacoco'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.group10b.blueka"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            testCoverageEnabled true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    //Test classes not running when including the testOption below
+    /*testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }*/
+}
+
+dependencies {
+    implementation "com.polidea.rxandroidble2:mockclient:1.11.1"
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation files('libs\\apache-commons-net.jar')
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'org.mockito:mockito-core:2.19.0'
+    androidTestImplementation "com.github.Polidea.RxAndroidBle:rxandroidble:master-1.12.0"
+    androidTestImplementation "com.github.Polidea.RxAndroidBle:mockclient:master-1.12.0"
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    testImplementation 'org.mockito:mockito-core:2.23.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'com.android.support:support-annotations:23.1.0'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test:rules:0.5'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestUtil 'androidx.test:orchestrator:1.1.0'
+    implementation "androidx.cardview:cardview:1.0.0"
+}
+repositories {
+    maven { url 'https://jitpack.io' }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/backgroundcolor">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00AEC5"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+
+        <TextView
+            android:id="@+id/titleid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothic"
+            android:text="Blueka"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textcolor"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/textid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/verdana"
+        android:text="Number of devices in concert"
+        android:textSize="16sp"
+        android:textColor="@color/textcolor"/>
+
+
+    <TextView
+        android:id="@+id/countid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/gothic"
+        android:text="2"
+        android:textSize="100sp"
+        android:textColor="@color/textcolor"/>
+
+    <SeekBar
+        android:id="@+id/seekbarid"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:min="2"
+        android:max="10"
+        android:layout_marginTop="60dp"
+        android:progress="2"
+        android:scaleX="1.85"
+        android:scaleY="1.85"
+        android:thumbTint="#00AEC5"
+        android:progressBackgroundTint="#8E8481"
+        android:progressTint="#00AEC5"/>
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="40dp"
+    android:text="CONNECT"
+    android:id="@+id/connect_button"
+    android:background="@color/buttoncolor"
+    android:textColor="@color/buttontext"
+    />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/textcolor"/>
+
+    <TextView
+        android:id="@+id/secondsRemaining"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:textColor="@color/textcolor"/>
+
+
+
+
+</LinearLayout>
